@@ -18,23 +18,10 @@
       <ul class="nav navbar-nav navbar-right">
 
           <% if user_signed_in? %>
-            <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Campioni<span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href=<%=  %>>#</a></li>
-            <li><a href=<%=  %>>##</a></li>
-            
-           </ul>
-        </li>
-
-            <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Colombaia <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href=<%= %>>####</a></li>
-                       
-          </ul>
-        </li>
-           <li><%= link_to "####" %></li>
+      
+          
+           <li><%= link_to "Colombe",pigeons_path %></li>
+           <li><%= link_to "Prodotti",products_path %></li>
             <li><%= link_to "Impostazioni",edit_user_registration_path %></li>
             <li><%= link_to "Log Out",destroy_user_session_path, method: :delete %></li>
 

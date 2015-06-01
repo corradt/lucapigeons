@@ -1,19 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nome:</strong>
   <%= @pigeon.name %>
 </p>
 
 <p>
-  <strong>Matr:</strong>
+  <strong>Matricola:</strong>
   <%= @pigeon.matr %>
 </p>
 
 <p>
-  <strong>Year:</strong>
+  <strong>Anno:</strong>
   <%= @pigeon.year %>
 </p>
+<p>
+  <strong>Sesso:</strong>
+  <%= @pigeon.sex%>
+</p>
+
+<%= link_to pigeon_path(@pigeon) do %>
+<%= image_tag @pigeon.image.url(:original), class: "img-responsive" %>
+<% end %>
+
+
 
 <%= link_to 'Edit', edit_pigeon_path(@pigeon) %> |
 <%= link_to 'Back', pigeons_path %>

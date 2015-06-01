@@ -1,8 +1,10 @@
 <table class="table">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Description</th>
+      <th>Nome</th>
+      <th>Matricola</th>
+      <th>Anno</th>
+      <th>Sesso</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,10 +15,11 @@
         <td><%= pigeon.name %></td>
         <td><%= pigeon.matr %></td>
         <td><%= pigeon.year %> </td>
+        <td><%= pigeon.sex %> </td>
         <td><%= image_tag pigeon.image.url(:thumb), class: "style_image" %></td>
-        <td><%= link_to 'Show', pigeon %></td>
-        <td><%= link_to 'Edit', edit_pigeon_path(pigeon) %></td>
-        <td><%= link_to 'Destroy', pigeon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostra Dettagli', pigeon,class:"btn btn-primary"%></td>
+        <td><%= link_to 'Modifica Colomba', edit_pigeon_path(pigeon),class:"btn btn-warning" %></td>
+        <td><%= link_to 'Elimina Colomba', pigeon, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +27,4 @@
 
 <br>
 
-<%= link_to 'New Product', new_pigeon_path %>
+<%= link_to 'Inserisci Nuova Colomba', new_pigeon_path,class:"btn btn-info" %>

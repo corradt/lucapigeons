@@ -1,14 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Titolo:</strong>
   <%= @product.title %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Descrizione:</strong>
   <%= @product.description %>
 </p>
+<p>
+  <strong>Prezzo:</strong>
+  <%= @product.price %>
+</p>
+
+
+<%= link_to product_path(@product) do %>
+<%= image_tag @product.image.url(:original), class: "img-responsive" %>
+<% end %>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

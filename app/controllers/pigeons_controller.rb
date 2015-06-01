@@ -75,6 +75,6 @@ class PigeonsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pigeon_params
-      params.require(:pigeon).permit(:name, :matr, :year,:image)
+      params.require(:pigeon).permit(:name, :matr, :year,:image,:sex)
     end
 end
