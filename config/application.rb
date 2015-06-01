@@ -28,9 +28,9 @@ module Lucapigeons
         storage: :s3,
         s3_host_name: "s3-us-west-2.amazonaws.com",
         s3_credentials: {
-            bucket: 'lucapigeons-development',
-            access_key_id: 'AKIAIB4F43QAYD6W57EQ',
-            secret_access_key: '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' 
+            bucket: ENV['S3_BUCKET'],
+            access_key_id: ENV['access_key_id'],
+            secret_access_key: ENV['secret_access_key']
         }
     }
 
