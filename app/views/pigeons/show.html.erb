@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pigeon.name %>
+</p>
+
+<p>
+  <strong>Matr:</strong>
+  <%= @pigeon.matr %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @pigeon.year %>
+</p>
+
+<%= link_to 'Edit', edit_pigeon_path(@pigeon) %> |
+<%= link_to 'Back', pigeons_path %>

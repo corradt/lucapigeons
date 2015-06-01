@@ -1,0 +1,10 @@
+<h1>Editing Product</h1>
+
+<% if policy(@product).index? %>
+<%= render "form" %>
+<% else %>
+<%= render "normal_user_index" %>
+<% end %>
+
+<%= link_to 'Show', @product %> |
+<%= link_to 'Back', products_path %>

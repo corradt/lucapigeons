@@ -1,0 +1,7 @@
+<p id="notice"><%= notice %></p>
+
+<% if policy(@pigeons).index? %>
+<%= render "admin_index" %>
+<% else %>
+<%= render "normal_user_index" %>
+<% end %>

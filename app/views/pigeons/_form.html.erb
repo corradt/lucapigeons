@@ -1,0 +1,32 @@
+
+<%= simple_form_for(@pigeon, html:{class: "form-signin"}) do |f| %>
+  <% if @pigeon.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pigeon.errors.count, "error") %> prohibited this pigeon from being saved:</h2>
+
+      <ul>
+      <% @pigeon.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+    <%= f.input :name, required: false,label:false,placeholder:"nome descrittivo della colomba", class:"form-control"%>
+
+  
+    <%= f.input :matr,required: false,label:false,placeholder:"Matricola della Colomba", class:"form-control" %>
+  
+  
+    <%= f.input :year,required: false,label:false,placeholder:"Anno della colomba", class:"form-control" %>
+
+
+    <%= f.input :image %>
+ 
+ 
+  
+
+    <%= f.button :submit, "Crea", class:"btn btn-primary" %>
+ 
+<% end %>

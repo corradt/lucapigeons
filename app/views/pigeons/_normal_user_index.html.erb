@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pigeons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Matr</th>
+      <th>Year</th>
+      <th>Image</th>
+
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pigeons.each do |pigeon| %>
+      <tr>
+        <td><%= pigeon.name %></td>
+        <td><%= pigeon.matr %></td>
+        <td><%= pigeon.year %></td>
+       <td> <div class="col-md-3">
+<div class="thumbnail">
+<%= link_to pigeon_path(pigeon) do %>
+<%= image_tag pigeon.image.url(:original), class: "img-responsive" %>
+<% end %>
+
+</div>
+</div>
+</td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

@@ -1,0 +1,10 @@
+<h1>Editing Pigeon</h1>
+
+<% if policy(@pigeon).index? %>
+<%= render "form" %>
+<% else %>
+<%= render "normal_user_index" %>
+<% end %>
+
+<%= link_to 'Show', @pigeon %> |
+<%= link_to 'Back', pigeons_path %>

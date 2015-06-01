@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Products</h1>
+
+<% if policy(@products).index? %>
+<%= render "admin_index" %>
+<% else %>
+<%= render "normal_user_index" %>
+<% end %>
